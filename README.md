@@ -92,7 +92,7 @@ L'application est déployée automatiquement via le pipeline CI/CD.
 ### Prérequis
 
 - Disposer d'un compte sur les services SaaS suivants : GitHub Actions, Docker Hub, Render.
-- Configurer les variables d'environnement pour le projet GitHub Actions :
+- Configurer dans les paramètres du dépot github les variables d'environnement pour le projet GitHub Actions :
   - `DOCKER_USERNAME`: identifiant du compte Docker Hub
   - `DOCKER_PASSWORD`: mot de passe du compte Docker Hub
   - `RENDER_API_KEY`: clé API de l'application sur Render
@@ -130,8 +130,4 @@ Documentation Docker : [https://docs.docker.com/](https://docs.docker.com/)
 Placez-vous à la racine du répertoire contenant le projet puis lancez la commande suivante :
 
 ```bash
-docker compose build
-docker compose up
-
-
-
+docker build -t <NEW_IMAGE_NAME> . && docker run -d -p 8000:8000 --env-file ./.env <NEW_IMAGE_NAME>
