@@ -121,13 +121,13 @@ Chaque push sur le repository GitHub déclenche un workflow de GitHub Actions :
 
 ### Utilisation de Docker en local
 
-Une fois le conteneur lancé, allez à l'adresse `http://localhost:8000` pour accéder à l'application.
+```bash
+docker compose build
+docker compose up
+```
+
+Une fois le conteneur lancé, allez à l'adresse `http://localhost:80` pour accéder à l'application.
 
 Documentation Docker : [https://docs.docker.com/](https://docs.docker.com/)
 
-#### Création d'une nouvelle image et lancement
 
-Placez-vous à la racine du répertoire contenant le projet puis lancez la commande suivante :
-
-```bash
-docker build -t <NEW_IMAGE_NAME> . && docker run -d -p 8000:8000 --env-file ./.env <NEW_IMAGE_NAME>
