@@ -10,5 +10,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-handler400 = 'oc_lettings_site.views.error_404_view'
+handler404 = 'oc_lettings_site.views.error_404_view'
 handler500 = 'oc_lettings_site.views.error_500_view'
