@@ -3,3 +3,4 @@ flake8==3.7.0
 pytest-django==4.8.0
 coverage==7.5.3
 gunicorn==22.0
+sentry-sdk==2.13.0
