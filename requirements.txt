@@ -4,6 +4,6 @@ pytest-django==4.8.0
 coverage==7.5.3
 gunicorn==22.0
 sentry-sdk==2.13.0
-sphynx==8.0.2
+sphynx==8.0
 sphinx-rtd-theme==2.0
 sphinx-autobuild==2024.4.16
