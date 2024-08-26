@@ -19,11 +19,3 @@ def letting(request, letting_id):
         'address': letting.address,
     }
     return render(request, 'lettings/letting.html', context)
-
-
-def error_400_view(request, exception):
-    return render(request, 'error_400.html', status=400)
-
-
-def error_500_view(request):
-    return render(request, 'error_500.html', status=500)
